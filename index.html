@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/buttonFuction.js" type="text/javascript" defer></script>
+  <script src="scripts/tryCatch.js" type="text/javascript" defer></script>
   <title>Lab 9</title>
 
   <style>
@@ -69,40 +71,24 @@
     </form>
 
     <section id="error-btns">
-      <button>Console Log</button>
-      <button>Console Error</button>
-      <button>Console Count</button>
-      <button>Console Warn</button>
-      <button>Console Assert</button>
-      <button>Console Clear</button>
-      <button>Console Dir</button>
-      <button>Console dirxml</button>
-      <button>Console Group Start</button>
-      <button>Console Group End</button>
-      <button>Console Table</button>
-      <button>Start Timer</button>
-      <button>End Timer</button>
-      <button>Console Trace</button>
-      <button>Trigger a Global Error</button>
+      <button id="button-log">Console Log</button>
+      <button id="button-error">Console Error</button>
+      <button id="button-count">Console Count</button>
+      <button id="button-warn">Console Warn</button>
+      <button id="button-assert">Console Assert</button>
+      <button id="button-clear">Console Clear</button>
+      <button id="button-dir">Console Dir</button>
+      <button id="button-dirxml">Console dirxml</button>
+      <button id="button-start">Console Group Start</button>
+      <button id="button-end">Console Group End</button>
+      <button id="button-table">Console Table</button>
+      <button id="button-timer">Start Timer</button>
+      <button id="button-etimer">End Timer</button>
+      <button id="button-trace">Console Trace</button>
+      <button id="button-gerror">Trigger a Global Error</button>
+      <button id="button-myerror">My error</button>
     </section>
   </main>
-
-  <script>
-    let form = document.querySelector('form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      let output = document.querySelector('output');
-      let firstNum = document.querySelector('#first-num').value;
-      let secondNum = document.querySelector('#second-num').value;
-      let operator = document.querySelector('#operator').value;
-      output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
-    });
-
-    let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
-
-    // Start your code here
-    // You may move this JS to another file if you wish
-  </script>
 </body>
 
 </html>
