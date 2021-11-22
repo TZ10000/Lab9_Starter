@@ -1,4 +1,5 @@
 
+TrackJS.track('Testing TrackJS!');
 let form = document.querySelector('form');
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -35,3 +36,12 @@ function test(a, b) {
     }
     console.log('sum = '+ (a+b));
 }
+
+window.onerror = function() {
+    console.log('onerror');
+};
+
+//window.addEventListener('error', function(event) { 
+  //  this.console.log('error listener')
+ //})
+
